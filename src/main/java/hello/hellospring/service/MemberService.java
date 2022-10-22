@@ -5,9 +5,11 @@ import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public class MemberService {
 
 //    private final MemberRepository memberRepository = new MemoryMemberRepository(); // 테스트 케이스와 다른 인스턴스이기 때문에 DI를 이용한 아래 코드 사용(생성자 주입)
